@@ -31,9 +31,28 @@ There is a plan (~summer-autumn 2020) to extend this functionality to other ChIP
 
 2. Navigate to the directory "R_metagene_TPR1"
 
-3. Open RStudio with R version >=3.6 (was tested on RStudio v1.1.463 on Windows 10 and v1.2.5042 on MacOS Catalina)
+3. Open RStudio with R version >=3.6 (was tested on RStudio v1.1.463 on Windows 10 and v1.2.5042 on MacOS Catalina). RStudio is preferred for the correct work of scripts since setting of the working directory is made with RStudio API 'rstudioapi::getActiveDocumentContext()'
 
-4.
+4. Install the package 'metagene' from Bioconductor (BiocManager::install("metagene")) and its dependencies
+
+5. Other required libraries: 'BiocGenerics' (Bioconductor), 'stringr', 'knitr' and 'ggplot2'
+
+6. Download files with alignments "TPR1_WT.bam", "TPR1_WT.bam.bai", "TPR1_WT_input.bam", "TPR1_WT_input.bam.bai" from GEO submission accompanying the preprint (GEO accession number XXX) ~2Gb
+
+7. Place the downloaded files inside of the copied directory ./bam_bai/TPR1/
+
+8. Test run, step 1. Open the script "01_Preparation_BED_files.R" select everything and run it.
+
+At this step, coordinates of regions to plot for the genes of interest are saved into separate files (so called, BED files) - one per gene set.  Gene sets are stored as individual tab-delimited TXT files inside of the directory ./gene_sets (input for the script). The output BED files are saved in ./bed_files . Once you run the script, you should have 3 files in ./bed_files : (1) initial BED file for all Arabidopsis genes "metagene_BED_gene_TAIR10.bed", (2) BED file for for all TPR1 bound genes ("TPR1_targets.bed") and (3) a BED file for 'randomly' selected 2000 Arabidopsis genes "TAIR_2000.bed"
+
+9. Test run, step 2. Open the script "02_Drawing_metaplots_TPR1.R", select everything and run it.
+
+Here, BED files generated in step 1 provide coordinates of genomic regions (genes) to parse read count information stored in the downloaded BAM files. You will get a couple of warning messages "cannot find specified path". This seems to be a normal behaviour for 'metagene' (see 'metagene' manual). As a result, you should get three files in the directory ./metaplots : (1) "TPR1_WT.pdf", (2) "input_TPR1_WT.pdf" and (3) "input_norm.pdf". They should the same as in ./expected_metaplots with the exception that the line for TAIR_2000 gene set might look slightly different. This is because the TAIR_2000 set is generated again after each run of "01_Preparation_BED_files.R".
+
+10. Once the test run looks good, you are good to prepare metaplots for your gene sets of interest. For that, create a TXT file with <2000 AGI codes and save it in ./gene_sets under the name "my_genes.txt" or other name. Please use file "TPR1_targets.txt" in ./gene_sets as examples (tab-delimited format). You can visualize multiple gene sets on one metaplot. For that place multiple TXT files in ./gene_sets - one gene set per a TXT tab-delimited file. Names of the files will be used to label curves on the resulting metaplot.
+
+11. Resulting metaplots are saved into the directory ./metaplots
+
 
 ### Words of caution:
 #### 'metagene' vs. deepTools
