@@ -79,6 +79,7 @@ for (i in 1:nrow(mark_name_and_location)){
   my_plot = plot_metagene(df)
   print(my_plot +
     labs(y = "Coverage, RPM", x = "", title = mark_name) +
+    coord_cartesian(ylim = c(0, 4)) +
     scale_x_continuous(breaks = c(1,50,100), labels = c("-2 kb","TSS","2 kb")) +
     theme(plot.title = element_text(size=14, face = "bold", hjust = 0.5),
           axis.title.x = element_text(color="blue", size=14, face="bold"),
@@ -102,6 +103,7 @@ pdf(file.path(out_data, paste0("input_norm.pdf")))
 g <- ggplot(data = df_norm, aes(x = bin, y = value, group = region, colour = region))
 g + geom_line(size = 3) +
   labs(y = "Coverage, RPM, input normalized", x = "", title = "Enrichment of TPR1-GFP at the gene sets") +
+  coord_cartesian(ylim = c(0, 4)) +
   scale_x_continuous(breaks = c(1,50,100), labels = c("-2 kb","TSS","2 kb")) +
   theme_bw() + 
   theme(plot.title = element_text(size=14, face = "bold", hjust = 0.5),
