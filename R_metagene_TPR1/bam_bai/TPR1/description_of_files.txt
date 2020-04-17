@@ -1,0 +1,4 @@
+"TPR1_WT.bam" - file with the alignment data for TPR1-GFP ChIP-seq, three combined replicates (~0.9 Gb)
+"TPR1_WT.bam.bai" - index file to support parsing of "TPR1_WT.bam" (~0.4 Mb)
+"TPR1_WT_input.bam" - file with the alignment data for TPR1-GFP input, three combined replicates (~1.1 Gb)
+"TPR1_WT_input.bam.bai" - index file to support parsing of "TPR1_WT_input.bam" (~0.4 Mb)
