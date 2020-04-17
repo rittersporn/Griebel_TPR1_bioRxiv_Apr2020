@@ -42,4 +42,4 @@ a 'random' subset of 2000 Arabidopsis genes ("TAIR_2000" on the plots; 'random' 
 
 A standard personal computer (~8 Gb RAM) does not have enough memory to parse data for all Arabidopsis genes. However, the 2000 'random' genes should give a good idea about the background enrichment levels. In each run of the script "01_Preparation_BED_files.R", the 2000 genes are selected again, therefore the final line for them on the metaplots will change slightly.
 
-Since you have a possibility to provide your own sets of genes, include your own controls (e.g. selected to have a basal expression level similar to the test set).
+Since you have a possibility to provide sets of genes, include your might want to include your own controls (e.g. selected to have a basal expression level similar to the test set), but the 'random' 2000 genes is a good starting point.
