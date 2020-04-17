@@ -17,11 +17,23 @@ expected output - a list of 1441 TPR1-GFP bound genes (file "TPR1_bound_genes.tx
 
 ## preparation of metaplots for gene sets of interest
 
+### introduction
+
 We prepared two R scripts to enable the research community to access our TPR1 ChIP seq data without a need to process raw reads. In our opinion, metaplots help to reveal general patterns in the distribution of chromatin features at the genes of interest. As a part of this preprint, we provide access only to TPR1-GFP ChIP-seq data.
+
+In its heart, the functionality presented here has the 'metagene' package for R. Although the package does not produce plots as deepTools for ChIP-seq datasets, it offers a simple and an accessible way to look into a range of ChIP-seq data in a matter of minutes using a regular personal computer (MacOS or Windows). If your gene set of interest turns out to be enriched for binding events by certain TFs or for histone marks as seen on the metaplots generated with 'metagene', one could follow this up in more details (e.g. using deepTools).
 
 There is a plan (~summer-autumn 2020) to extend this functionality to other ChIP-seq experiments. They will include ChIP-seq data produced in Parker laboratory and being prepared for release and publicly available data for critical TFs and chromatin marks processed by Parker group. In this case, one will have an opportunity to generate metaplots for ~40 histone marks and TFs within ~20-30 minutes simply by running R scripts on a personal computer. In this regard, the TPR1 ChIP-seq data released in this preprint serve as "Versuchskaninnchen" for providing access to the community. If you want to learn which of the ~40 chromatin features are enriched at your gene sets of interest, let us know. We are happy to support your research. They include Arabidopsis data for H3K4me3, H3K36me3, H3K27me3, H3K9ac, H3K9me2, H2Aub, MYC2, MED25, PolII, PolV, SARD1, WRKY TFs.
 
-In its heart, the functionality presented here has the 'metagene' package for R. Although the package does not produce plots as deepTools for ChIP-seq datasets, it offers a simple and an accessible way to look into a range of ChIP-seq data in a matter of minutes using a regular personal computer (MacOS or Windows). If your gene set of interest turns out to be enriched for binding events by certain TFs or for histone marks as seen on the metaplots generated with 'metagene', one could follow this up in more details (e.g. using deepTools).
+### how to use
+
+1. Download this repository (green button "Clone or download")
+
+2. Navigate to the directory "R_metagene_TPR1"
+
+3. Open RStudio with R version >=3.6 (was tested on RStudio v1.1.463 on Windows 10 and v1.2.5042 on MacOS Catalina)
+
+4.
 
 ### Words of caution:
 #### 'metagene' vs. deepTools
