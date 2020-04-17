@@ -24,11 +24,11 @@ Nevertheless, 'metagene' runs in the R environment and, our opinion, offers a si
 ### Words of caution:
 #### 'metagene' vs. deepTools
 
-The provided here functionality relies on the R package 'metagene'. Scaling and normalization procedures in 'metagene' are different from and are not as extensive as in deepTools. Therefore, metaplots obtained with 'metagene' and deepTools look different. Also, 'metagene' does not have the option to scale the gene models. Therefore in the case of scripts provided here, you would get an enrichment profile around the transcription start site (TSS) rather than over the entire gene model.
+The functionality provided here relies on the R package 'metagene'. Scaling and normalization procedures in 'metagene' are different from and are not as extensive as in deepTools. Therefore, metaplots obtained with 'metagene' and deepTools look different. Also, 'metagene' does not have the option to scale the gene models. That is why in the case of scripts here, you would get an enrichment profile around the transcription start site (TSS) rather than over the whole gene models.
 
-#### normalization of TPR1-GFP to input on the resulting metaplot
+#### normalization of TPR1 ChIP-seq signal to input on the resulting metaplot "input_norm.pdf"
 
-In contrast to deepTools, 'metagene' does not offer the per-gene normalization to input as it is done in deepTools. The input-normalized profile on the plot "input_norm.pdf" represents a result of subtraction of metaplot values for TPR1 and the input. This is not optimal, because normalization should be performed per a gene and not for a gene set as a whole. Still, this gives a very good idea whether your gene set of interest has any evidence for TPR1 binding.
+In contrast to deepTools, 'metagene' does not offer a per-gene normalization to input as it is done in deepTools. The input-normalized profile on the plot "input_norm.pdf" represents a result of simple subtraction of averaged RPM values for TPR1 and the input. This is not optimal, because normalization should be performed per gene and not for a gene set as a whole. Still, this gives a very good idea whether your gene set has any evidence for TPR1 binding.
 
 #### control gene sets
 
@@ -36,8 +36,8 @@ As in any experiment, it is important to compare your gene sets of interest to c
 
 TPR1 bound genes (Supplemental Data 1 in the preprint, "TPR1_targets" on the plots)
 
-a 'random' subset of 2000 Arabidopsis genes ("TAIR_2000" on the plots)
+a 'random' subset of 2000 Arabidopsis genes ("TAIR_2000" on the plots; 'random' because nothing is truly random).
 
-A standard personal computer (~8 Gb RAM) does not have enough memory to parse data for all Arabidopsis genes. However, the 2000 genes should give a good idea about the background enrichment levels. In each run of the script "01_Preparation_BED_files.R", the 2000 genes are selected again, therefore the final line for them on the metaplots will change slightly.
+A standard personal computer (~8 Gb RAM) does not have enough memory to parse data for all Arabidopsis genes. However, the 2000 'random' genes should give a good idea about the background enrichment levels. In each run of the script "01_Preparation_BED_files.R", the 2000 genes are selected again, therefore the final line for them on the metaplots will change slightly.
 
-Since you have a possibility to provide your own sets of genes, please do use your own sets of control genes (e.g. selected to have a basal expression level similar to the test set).
+Since you have a possibility to provide your own sets of genes, include your own controls (e.g. selected to have a basal expression level similar to the test set).
