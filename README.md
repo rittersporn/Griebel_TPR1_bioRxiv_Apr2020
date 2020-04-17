@@ -6,7 +6,7 @@ The repository contains scripts and other materials that were used during prepar
 
 ## selection of TPR1 bound genes
 
-TPR1 bound genes were selected from the peak annotation file ("TPR1_peak_annotation.txt") using R script "TPR1_bound_genes_selection.R". In brief, unique AGI codes were taken from the column "Annotation" and "Nearest promoterID" and they together define "TPR1 bound genes".
+TPR1 bound genes were selected from the peak annotation file ("TPR1_peak_annotation.txt" as in Supplemental Data 1) using R script "TPR1_bound_genes_selection.R". In brief, unique AGI codes were taken from the column "Annotation" and "Nearest promoterID" and they together define "TPR1 bound genes".
 
 input - ./input_files/TPR1_peak_annotation.txt (Supplemental Data 1)
 
