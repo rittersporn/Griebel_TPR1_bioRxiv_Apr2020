@@ -25,7 +25,24 @@ In its heart, the functionality presented here has the 'metagene' package for R.
 
 There is a plan (~summer-autumn 2020) to extend this functionality to other ChIP-seq experiments. They will include ChIP-seq data produced in Parker laboratory and being prepared for release and publicly available data for critical TFs and chromatin marks processed by Parker group. In this case, one will have an opportunity to generate metaplots for ~40 histone marks and TFs within ~20-30 minutes simply by running R scripts on a personal computer. In this regard, the TPR1 ChIP-seq data released in this preprint serve as "Versuchskaninnchen" for providing access to the community. If you want to learn which of the ~40 chromatin features are enriched at your gene sets of interest, let us know. We are happy to support your research. They include Arabidopsis data for H3K4me3, H3K36me3, H3K27me3, H3K9ac, H3K9me2, H2Aub, MYC2, MED25, PolII, PolV, SARD1, WRKY TFs.
 
-### how to use
+### how to use (short version, after the 1st use)
+
+Inside of the directory R_metagene_TPR1
+
+1. Save a list of genes of interest in a TXT tab-delimited separate file in the directory ./gene_sets . Use the file "TPR1_targets.txt" as an example.
+
+2. In ./gene_sets, you can save multiple files - one per gene set.
+
+3. Delete all files but "metagene_BED_gene_TAIR10.bed" from the directory ./bed_files
+
+4. Run "01_Preparation_BED_files.R"
+
+5. Run "02_Drawing_metaplots_TPR1.R"
+
+6. Check the directory ./metaplots for results.
+
+
+### how to use (long version, for the first time use)
 
 1. Download this repository (green button "Clone or download")
 
@@ -47,7 +64,7 @@ At this step, coordinates of regions to plot for the genes of interest are saved
 
 9. Test run, step 2. Open the script "02_Drawing_metaplots_TPR1.R", select everything and run it.
 
-Here, BED files generated in step 1 provide coordinates of genomic regions (genes) to parse read count information stored in the downloaded BAM files. You will get a couple of warning messages "cannot find specified path". This seems to be a normal behaviour for 'metagene' (see 'metagene' manual). As a result, you should get three files in the directory ./metaplots : (1) "TPR1_WT.pdf", (2) "input_TPR1_WT.pdf" and (3) "input_norm.pdf". They should the same as in ./expected_metaplots with the exception that the line for TAIR_2000 gene set might look slightly different. This is because the TAIR_2000 set is generated again after each run of "01_Preparation_BED_files.R".
+Here, BED files generated in step 1 provide coordinates of genomic regions (genes) to parse read count information stored in the downloaded BAM files. You will get a couple of warning messages "In normalizePath(path.expand(path), winslash, mustWork) : <...> The system cannot find the file specified". This is normal behaviour for 'metagene' (see 'metagene' manual). As a result, you should get three files in the directory ./metaplots : (1) "TPR1_WT.pdf", (2) "input_TPR1_WT.pdf" and (3) "input_norm.pdf". They should the same as in ./expected_metaplots with the exception that the line for TAIR_2000 gene set might look slightly different. This is because the TAIR_2000 set is generated again after each run of "01_Preparation_BED_files.R".
 
 10. Once the test run looks good, you are good to prepare metaplots for your gene sets of interest. For that, create a TXT file with <2000 AGI codes and save it in ./gene_sets under the name "my_genes.txt" or other name. Please use file "TPR1_targets.txt" in ./gene_sets as examples (tab-delimited format). You can visualize multiple gene sets on one metaplot. For that place multiple TXT files in ./gene_sets - one gene set per a TXT tab-delimited file. Names of the files will be used to label curves on the resulting metaplot.
 
