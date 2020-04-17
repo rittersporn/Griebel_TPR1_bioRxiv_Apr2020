@@ -30,7 +30,7 @@ The functionality provided here relies on the R package 'metagene'. Scaling and 
 
 #### normalization of TPR1 ChIP-seq signal to input on the resulting metaplot "input_norm.pdf"
 
-In contrast to deepTools, 'metagene' does not offer a per-gene normalization to input as it is done in deepTools. The input-normalized profile on the plot "input_norm.pdf" represents a result of simple subtraction of averaged RPM values for gene sets in TPR1 ChIP-seq and sequenced input samples. This is not optimal, because normalization should be performed per gene and not for a gene set as a whole. Still, this gives a very good idea whether your gene set has any evidence for TPR1 binding.
+In contrast to deepTools, 'metagene' does not offer a per-gene normalization to input as it is done in deepTools. The input-normalized profile on the plot "input_norm.pdf" represents a result of simple subtraction of averaged RPM values for gene sets in TPR1 ChIP-seq and sequenced input samples. This is not optimal, because normalization should be performed per gene and not for a gene set as a whole. Still, this gives a very good idea whether your gene set has any evidence of TPR1 binding.
 
 #### control gene sets
 
