@@ -18,6 +18,12 @@ in_bed = file.path(wd, "bed_files")
 in_bam = file.path(wd, "bam_bai", "TPR1")
 out_data = file.path(wd, "metaplots")
 
+
+# empty directory "metaplots"
+# to avoid mixing up outputs from subsequent runs
+unlink(file.path(out_data, "*")) # remove all files from the directory "metaplots"
+
+
 #--------------------------------------------------------------------------------------------------------
 # Metaplotting
 #--------------------------------------------------------------------------------------------------------
