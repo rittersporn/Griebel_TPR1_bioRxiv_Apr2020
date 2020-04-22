@@ -11,6 +11,9 @@ in_bed = file.path(wd, "bed_files", "metagene_BED_gene_TAIR10.bed")
 in_genes = file.path(wd, "gene_sets")
 out_data = file.path(wd, "bed_files")
 
+# empty directory "bed_files" (except "metagene_BED_gene_TAIR10.bed")
+# to avoid mixing up outputs from subsequent runs
+unlink(file.path(in_bed, list.files(in_bed)[list.files(in_bed) != "metagene_BED_gene_TAIR10.bed"])) # remove all but one bed files
 
 #--------------------------------------------------------------------------------------------------------
 # Generate the bed files for groups of genes in separate files in the directory "gene_sets";
