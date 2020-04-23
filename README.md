@@ -72,7 +72,7 @@ At this step, coordinates of regions to plot for the genes of interest are saved
 
 Here, BED files generated in step 1 provide coordinates of genomic regions (genes) to parse read count information stored in the downloaded BAM files. You will get a couple of warning messages "In normalizePath(path.expand(path), winslash, mustWork) : <...> The system cannot find the file specified". This is normal behaviour for 'metagene' (see 'metagene' manual). As a result, you should get three files in the directory ./metaplots : (1) "TPR1_WT.pdf", (2) "input_TPR1_WT.pdf" and (3) "input_norm.pdf". They should the same as in ./expected_metaplots with the exception that the line for TAIR_2000 gene set might look slightly different. This is because the TAIR_2000 set is generated again after each run of "01_Preparation_BED_files.R".
 
-10. Once the test run looks good, you are good to prepare metaplots for your gene sets of interest. For that, create a TXT file with <2000 AGI codes and save it in ./gene_sets under the name "my_genes.txt" or other name. Please use file "TPR1_targets.txt" in ./gene_sets as an example (tab-delimited format). It is no problem to have gene model numbers (e.g. AT3G48090.2) or white-spaces before and after the gene code, as there is a input clean-up step. You can visualize multiple gene sets on one metaplot. For that place multiple TXT files in ./gene_sets - one gene set per a TXT tab-delimited file. Names of the files will be used to label curves on the resulting metaplot.
+10. Once the test run looks good, you are good to prepare metaplots for your gene sets of interest. For that, create a TXT file with <2000 AGI codes and save it in ./gene_sets under the name "my_genes.txt" or other name. Please use file "TPR1_targets.txt" in ./gene_sets as an example (tab-delimited format). It is no problem to have gene model numbers (e.g. AT3G48090.2) or whitespaces before and after the gene code, as there is a clean-up step for the input. You can visualize multiple gene sets on one metaplot. For that place multiple TXT files in ./gene_sets - one gene set per a TXT tab-delimited file. Names of the files will be used to label curves on the resulting metaplot.
 
 11. Resulting metaplots are saved into the directory ./metaplots
 
@@ -88,7 +88,7 @@ In contrast to deepTools, 'metagene' does not offer a per-gene normalization to 
 
 #### control gene sets
 
-As in any experiment, it is important to compare your gene sets of interest to controls. By default, we provide two controls:
+As in any experiment, it is important to compare gene sets of interest to controls. By default, we provide two controls:
 
 1) TPR1 bound genes (Supplemental Data 1 in the preprint, "TPR1_targets" on the plots)
 
@@ -96,4 +96,4 @@ As in any experiment, it is important to compare your gene sets of interest to c
 
 A standard personal computer (~8 Gb RAM) does not have enough memory to parse data for all Arabidopsis genes. However, the 2000 'random' genes should give a good idea about the background enrichment levels. In each run of the script "01_Preparation_BED_files.R", the 2000 genes are selected again, therefore the final line for them on the metaplots will change slightly.
 
-Since you have a possibility to provide sets of genes, include your might want to include your own controls (e.g. selected to have a basal expression level similar to the test set), but the 'random' 2000 genes is a good starting point.
+Since you have a possibility to provide sets of genes, you might want to include your own controls (e.g. selected to have a basal expression level similar to the test set), but the 'random' 2000 genes is a good starting point.
