@@ -46,7 +46,7 @@ If your gene set of interest does not overlap with the negative control set(s), 
 
 To further evaluate TPR1 enrichment at the genes you are interested in, use the bigwig file provided as a part of this preprint and examine TPR1 enrichment at your individual genes of interest in the IGV browser.
 
-On the plot "input_norm.pdf" the confidence intervals are absent since the lines are obtained by subtracting RPM values for TPR1-GFP input from RPM values for TPR1 ChIP-seq. This simple 'normalization' should be used only as indication. For proper normalization, one should normalize read density per gene. 
+On the plot "input_norm.pdf" the confidence intervals are absent since the lines are obtained by subtracting RPM values for TPR1-GFP input from RPM values for TPR1 ChIP-seq. This simple 'normalization' should be used only as indication. For proper normalization, one should input-normalize per gene. 
 
 ### how to use (long version, for the first time use)
 
