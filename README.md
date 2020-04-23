@@ -1,6 +1,5 @@
-# Griebel et al bioRxiv Apr 2020, doi
+# Griebel, Lapin et al bioRxiv Apr 2020, doi
 # Title
-# Initial description of Arabidopsis TPR1 ChIP-seq data
 
 
 ## selection of TPR1 bound genes
