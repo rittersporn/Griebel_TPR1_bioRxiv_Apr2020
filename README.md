@@ -1,5 +1,5 @@
 # Griebel, Lapin et al bioRxiv Apr 2020, doi
-# Title
+# Genome-wide chromatin binding of transcriptional corepressor Topless-related 1 in Arabidopsis
 
 
 ## selection of TPR1 bound genes
@@ -60,7 +60,7 @@ On the plot "input_norm.pdf" the confidence intervals are absent since the lines
 
 5. Install other required libraries: 'BiocGenerics' (BiocManager::install("BiocGenerics")), 'stringr', 'knitr' and 'ggplot2'
 
-6. Download files with alignments and their indexes "TPR1_WT.bam", "TPR1_WT.bam.bai", "TPR1_WT_input.bam", "TPR1_WT_input.bam.bai" from GEO submission accompanying the preprint (GEO accession number XXX) ~2Gb
+6. Download files with alignments and their indexes "TPR1_WT.bam", "TPR1_WT.bam.bai", "TPR1_WT_input.bam", "TPR1_WT_input.bam.bai" from the Max Planck Digital Library collection accompanying the preprint [https://edmond.mpdl.mpg.de/imeji/collection/U6N5zIOIWgjjMZCu] ~2Gb
 
 7. Place the downloaded files inside of the copied directory ./bam_bai/TPR1/ 
 
