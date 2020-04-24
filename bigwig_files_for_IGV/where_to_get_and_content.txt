@@ -1,7 +1,7 @@
 bigwig file that can be used as input for IGV (Arabidopsis TAIR10 genome version) to examine enrichment of TPR1-GFP at genes of interest
 
 TPR1-GFP binding in pTPR1:TPR1-GFP Col-0 plants:
-File location - 
+File location - MPDL Collection https://edmond.mpdl.mpg.de/imeji/collection/U6N5zIOIWgjjMZCu
 File name - "substr_TPR1_WT_bs1.bw"
 The file contains input-normalized TPR1-GFP ChIP-seq data. The initial BAM files were readCount-scaled (defaulf in bamCompare), and
 normalization to the input was performed with the --operation subtract option (see below).
