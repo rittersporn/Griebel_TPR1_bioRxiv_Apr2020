@@ -1,6 +1,10 @@
-# Griebel, Lapin et al bioRxiv Apr 2020, doi
+# Griebel, Lapin et al bioRxiv Apr 2020, doi 10.1101/2020.04.25.060855
 # Genome-wide chromatin binding of transcriptional corepressor Topless-related 1 in Arabidopsis
 
+# THIS REPOSITORY IS OBSOLETE
+# PLEASE CHECK LATEST https://github.com/rittersporn/TPR1_metaplots_Griebel_Lapin_etal_2021
+
+The metaplot script was updated to allow the user to generate metaplots not only for the TPR1 Col-0 line but also for TPR1 Col-0 eds1. The respective input data were uploaded to https://edmond.mpdl.mpg.de/imeji/collection/U6N5zIOIWgjjMZCu
 
 ## selection of TPR1 bound genes
 
